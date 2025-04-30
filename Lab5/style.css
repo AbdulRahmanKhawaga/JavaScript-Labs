@@ -1,0 +1,137 @@
+body {
+  background-color: mintcream;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.slider-container {
+  width: 400px;
+  height: 350px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.slider-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+button {
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#studentForm {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 50%;
+  border: 1px solid rgb(144, 137, 137);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.radio-group {
+  display: flex;
+justify-content: space-between;
+}
+
+.radio-option {
+  display: flex;
+  gap: 5px;
+}
+
+.radio-option label {
+  margin-bottom: 0;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  min-height: 20px;
+}
+
+.operations {
+  display: flex;
+  flex-direction: row;
+  gap: 70px;
+}
+
+select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+table {
+  width: 80%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+tr.excellent {
+  background-color: #5fe36365;
+}
+
+tr.fail {
+  background-color: rgba(230, 49, 49, 0.383);
+}
+.organizer{
+    display: flex;
+}
+.organizer input{
+    width: 700px;
+    font-size: larger;
+    margin: 20px;
+}
