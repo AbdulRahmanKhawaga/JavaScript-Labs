@@ -159,13 +159,17 @@ function addStudent(e) {
 
   const tr = document.createElement("tr");
 
-  tr.className = grade >= 60 ? "excellent" : "fail";
+  tr.className = grade >= 76 ? "excellent" : grade >= 61 ? "average" : "fail";
 
   tr.innerHTML = `
     <td>${name}</td>
     <td>${grade}</td>
     <td>${department}</td>
-    <td><button style="background-color:red;color:white;border:none;padding:5px 10px;cursor:pointer;">Delete</button></td>
+    <td>
+    <button style="background-color:transparent;border:none;padding:5px 10px;cursor:pointer;">
+    <i class="fa-solid fa-trash-can" style="color:red;font-size:1.5rem"></i>
+    </button>
+    </td>
   `;
 
   const deleteBtn = tr.querySelector("button");
@@ -251,20 +255,24 @@ function addAToDo(e) {
   const doneCell = document.createElement("td");
   const checkbox = document.createElement("input");
   checkbox.type = "checkbox";
+  checkbox.className = "custom-checkbox";
   doneCell.appendChild(checkbox);
   tr.appendChild(doneCell);
 
   const taskCell = document.createElement("td");
   taskCell.innerText = taskText;
+  taskCell.style.color ="rgb(104,9,9)";
+  taskCell.style.fontSize= "1.33rem";
   tr.appendChild(taskCell);
 
   const deleteCell = document.createElement("td");
   const deleteBtn = document.createElement("button");
-  deleteBtn.innerText = "Delete";
-  deleteBtn.style.backgroundColor = "red";
-  deleteBtn.style.color = "white";
+  deleteBtn.style.backgroundColor = "transparent";
   deleteBtn.style.border = "none";
   deleteBtn.style.cursor = "pointer";
+  deleteBtn.innerHTML=`
+    <i class="fa-solid fa-trash-can" style="color:red;font-size:1.3rem"></i>
+    `
   deleteCell.appendChild(deleteBtn);
   tr.appendChild(deleteCell);
 
